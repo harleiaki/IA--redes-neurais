@@ -5,8 +5,6 @@ import streamlit         as st
 import numpy             as np
 import xlsxwriter
 
-from openpyxl import Workbook
-
 from datetime            import datetime
 from PIL                 import Image
 from io                  import BytesIO
