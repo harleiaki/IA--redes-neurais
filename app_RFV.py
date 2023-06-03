@@ -178,7 +178,7 @@ if __name__ == '__main__':
 	main()
     
 
-
+writer.close()
 
 
 
