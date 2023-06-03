@@ -17,9 +17,8 @@ def convert_df(df):
 # Função para converter o df para excel
 @st.cache_data
 def to_excel(df):
-    book = BytesIO()
-    writer = pd.ExcelWriter(book, engine='openpyxl')
-    #writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    output = BytesIO()
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
     df.to_excel(writer, index=False, sheet_name='Sheet1')
     writer.save()
     processed_data = output.getvalue()
